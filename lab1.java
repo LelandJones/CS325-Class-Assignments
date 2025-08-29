@@ -1,4 +1,18 @@
-
+// CS 325 Data Structures - Lehman
+//
+// fall 2025
+// lab1.java
+//
+// Lab #1 - (20 points) - Due: 9.29.2025 (5 pm)
+// Java Intro 
+// Fall 2025
+//
+// Read the comments below and update the code to complete each task.
+// Post and upload solutions to your GitHub account and share link to file.
+// Use AI with caution, you must be able to write Java code without AI
+//
+// Leland Jones
+//
 
 class lab1 {
 
