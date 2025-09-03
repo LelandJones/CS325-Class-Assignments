@@ -17,6 +17,7 @@ public class lab2 {
                 num = 1000;
             }
         } else {
+            System.out.println("Missing argument, using default 1000.");
             num = 1000;
         }
 
@@ -25,7 +26,29 @@ public class lab2 {
     }
 
     public static void showPrimes(int N) {
-        System.out.println("Inside showPrimes, got N = " + N);
+        boolean[] isPrime = new boolean[N + 1];
+
+        if (N >= 0) isPrime[0] = false;
+        if (N >= 1) isPrime[1] = false;
+        for (int i = 2; i <= N; i++) {
+            isPrime[i] = true;
+        }
+
+        int limit = (int) Math.sqrt(N);
+        for (int i = 2; i <= limit; i++) {
+            if (isPrime[i]) {
+                for (int j = i * i; j <= N; j += i) {
+                    isPrime[j] = false;
+                }
+            }
+        }
+
+        System.out.print("Primes: ");
+        for (int i = 2; i <= N; i++) {
+            if (isPrime[i]) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
     }
 }
-
