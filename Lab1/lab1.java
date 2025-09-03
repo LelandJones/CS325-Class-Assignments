@@ -1,3 +1,4 @@
+package Lab1;
 
 
 class lab1 {
