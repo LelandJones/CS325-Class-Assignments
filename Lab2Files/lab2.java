@@ -1,4 +1,4 @@
-package Lab2;
+package Lab2Files;
 // lab2.java
 // Leland Jones
 // September 5, 2025
