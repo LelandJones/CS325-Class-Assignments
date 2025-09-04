@@ -1,55 +1,37 @@
 package Lab2;
-
+// lab2.java
+// Leland Jones
+// September 5, 2025
+// calculates primes using Sieve of Eratosthenes
+// demonstrates command line arguments and methods
+// *** add answers to performance questions here ***
 
 public class lab2 {
 
-    public static void main(String[] args) {
-        int num;
-
-        if (args.length > 0) {
-            try {
-                num = Integer.parseInt(args[0]);
-                if (num < 2) {
-                    System.out.println("Input must be 2 or greater. Using default 1000.");
-                    num = 1000;
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Using default 1000.");
-                num = 1000;
-            }
-        } else {
-            System.out.println("Missing argument, using default 1000.");
-            num = 1000;
+	public static void main(String[] args) 
+	{
+		int num = 0;
+		
+		//add code to get num from command line argument
+		if (args.length > 0)
+        {
+            int N = 0;
+            N = Integer.parseInt( args[0] );
+            System.out.println( "N = " + N);
         }
-
-        System.out.println("N = " + num);
-        showPrimes(num);
-    }
-
-    public static void showPrimes(int N) {
-        boolean[] isPrime = new boolean[N + 1];
-
-        if (N >= 0) isPrime[0] = false;
-        if (N >= 1) isPrime[1] = false;
-        for (int i = 2; i <= N; i++) {
-            isPrime[i] = true;
+        else
+        {
+            System.out.println("Missing argument");
         }
-
-        int limit = (int) Math.sqrt(N);
-        for (int i = 2; i <= limit; i++) {
-            if (isPrime[i]) {
-                for (int j = i * i; j <= N; j += i) {
-                    isPrime[j] = false;
-                }
-            }
-        }
-
-        System.out.print("Primes: ");
-        for (int i = 2; i <= N; i++) {
-            if (isPrime[i]) {
-                System.out.print(i + " ");
-            }
-        }
-        System.out.println();
-    }
-}
+        
+		//call showPrimes
+		showPrimes( num );
+		
+	}//main
+	
+	public static void showPrimes(int N)
+	{
+		//add code to display primes		
+	}//showPrimes
+	
+}//lab2
