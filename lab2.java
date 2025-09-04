@@ -1,10 +1,4 @@
-package Lab2Files;
-// lab2.java
-// Leland Jones
-// September 5, 2025
-// calculates primes using Sieve of Eratosthenes
-// demonstrates command line arguments and methods
-// *** add answers to performance questions here ***
+
 
 public class lab2 {
 
