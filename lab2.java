@@ -1,3 +1,17 @@
+// lab2.java
+// Leland Jones
+// September 5, 2025
+// calculates primes using Sieve of Eratosthenes
+// demonstrates command line arguments and methods
+//
+// 1. What is the maximum prime number you can find using your program?
+// I was able to get to 100,000,000 but it took around 6 minutes. The max number depends on memory available.
+//
+// 2. How does printing vs. not printing the numbers affect performance?
+// Printing the numbers takes time and slows down the program. Not printing them improves performance.
+//
+// 3. What factors limit your program from finding larger prime numbers?
+// Memory is a major factor as well as CPU time.
 
 
 public class lab2 {
