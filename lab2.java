@@ -11,7 +11,7 @@
 // Printing the numbers takes time and slows down the program. Not printing them improves performance.
 //
 // 3. What factors limit your program from finding larger prime numbers?
-// Memory is a major factor as well as CPU time.
+// Memory is a major factor as well as the hard drive.
 
 
 public class lab2 {
