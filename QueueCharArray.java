@@ -7,45 +7,48 @@
  * to first and last elements in array.
  * The variable size is used to denote
  * an empty vs. full queue
+ * 
+ * Leland Jones
  */
+
 public class QueueCharArray {
 
 	// data
 	char data[];
-	int front;
+	int front; 
 	int back;
 	int size;
 	int MAX;
 
 	// default constructor
 	public QueueCharArray() {
-		MAX = 5;
-		data = new char[MAX];
-		size = 0;
-		front = 0;
-		back = -1;
+		MAX = 5; // default max size
+		data = new char[MAX]; // array
+		size = 0; // sets queue to empty
+		front = 0; // starts front at 0
+		back = -1; // -1 since no elements yet
 	}
 
 	// alternate constructor
 	public QueueCharArray(int max) {
-		MAX = max;
-		data = new char[MAX];
-		size = 0;
-		front = 0;
-		back = -1;
+		MAX = max; // user sets max size
+		data = new char[MAX]; // array
+		size = 0; // sets queue to empty
+		front = 0; // starts front at 0
+		back = -1; // -1 since no elements yet
 	}
 	public void clear() {
-		size = 0;
-		front = 0;
-		back = -1;
+		size = 0; // no elements
+		front = 0; // reset front
+		back = -1; // reset back
 	}
 
 	// add to back of queue
 	public void add(char v) {
 		if (!full()) {
             back = (back + 1) % MAX; // wrap-around increment
-            data[back] = v;
-            size++;
+            data[back] = v; // add to back
+            size++; // increase size
 			}
     }
 
@@ -62,7 +65,7 @@ public class QueueCharArray {
 	// return element from front of queue
 	public char front() {
 		if (empty()) {
-			return '?';
+			return '?'; // returns a placeholder if it is empty
 		}
 		return data[front];
 	}
@@ -70,13 +73,14 @@ public class QueueCharArray {
 	// remove element from front of queue
 	public boolean remove() {
 		if (empty()) {
-			return false;
+			return false; // doesnt remove if empty
 		}
-		front = (front + 1) % MAX;
-		size--;
+		front = (front + 1) % MAX; // moves front forward with wrap-around
+		size--; // decrease size
 		return true;
 	}
 
+	// gets current size of queue
 	public int size() {
 		return size;
 	}
