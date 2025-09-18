@@ -88,20 +88,7 @@ public class QueueCharArray {
      */
     public String toString() 
 	{
-		if (empty()) {
-			return "?";
-		}
-		
-		String s = "";
-		int count = 0;
-		int i = front;
-		while (count < size) {
-			s = s + data[i] + " ";
-			i = (i + 1) % MAX; // wrap-around increment
-			count++;
-		}
-		return s;
-	}
-	
-		
+		return "QUEUE";
+    }
+
 }// class
