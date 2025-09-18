@@ -46,7 +46,7 @@ public class QueueCharArray {
 	// add to back of queue
 	public void add(char v) {
 		if (!full()) {
-            back = (back + 1) % MAX; // wrap-around increment
+            back = (back + 1) % MAX; // wrap-around
             data[back] = v; // add to back
             size++; // increase size
 			}
