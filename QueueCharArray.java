@@ -75,7 +75,7 @@ public class QueueCharArray {
 		if (empty()) {
 			return false; // doesnt remove if empty
 		}
-		front = (front + 1) % MAX; // moves front forward with wrap-around
+		front = (front + 1) % MAX; // wrap-around
 		size--; // decrease size
 		return true;
 	}
