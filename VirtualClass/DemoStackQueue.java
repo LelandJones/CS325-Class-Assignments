@@ -26,7 +26,7 @@ class DemoStackQueue {
       //*** Part 1 - reverse stack
       //
 
-      String word = "Friday";  // *** change text to be your name ie. Norman Forester
+      String word = "Leland Jones";  // *** change text to be your name ie. Norman Forester
 
       StackCharArray st = new StackCharArray(100);
 
