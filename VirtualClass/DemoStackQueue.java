@@ -1,4 +1,5 @@
 package VirtualClass;
+
 // DemoStackQueue.java
 // prof. lehman
 // fall 2025
@@ -17,8 +18,6 @@ package VirtualClass;
 //    java DemoStackQueue
 //
 
-import QueueCharArray;
-
 class DemoStackQueue {
 
   public static void main(String[] args) {
@@ -26,7 +25,7 @@ class DemoStackQueue {
       //*** Part 1 - reverse stack
       //
 
-      String word = "Leland Jones";  // *** change text to be your name ie. Norman Forester
+      String word = "Friday";  // *** change text to be your name ie. Norman Forester
 
       StackCharArray st = new StackCharArray(100);
 
