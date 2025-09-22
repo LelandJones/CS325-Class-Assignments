@@ -18,17 +18,17 @@ public class palindrome {
         System.out.println( palindromeStatus("sass") ); //false
 
         //uncomment to test additional words
-        /*
+        
         String words[] = { "a", "racecar", "noon", "hannah", "abcba", "abbca", "nope", "ab" };
 
         for (int i = 0; i < words.length; i++) {
 
-            if (palindrome(words[i]) == true)
+            if (palindromeStatus(words[i]) == true)
                 System.out.println( words[i] + " IS a palindrome");
             else
                 System.out.println( words[i] + " IS NOT a palindrome");
         }
-        */
+        
         
     }// main
 
