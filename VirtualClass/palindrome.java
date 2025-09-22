@@ -1,3 +1,4 @@
+package VirtualClass;
 /// palindrome.java 
 //
 // fall 2025
@@ -7,13 +8,14 @@
 //
 // Use for paindrome.java
 
+
 public class palindrome {
     
     public static void main(String[] args) {
 
         //single call to test
-        System.out.println( palindrome("racecar") ); //true
-        System.out.println( palindrome("sass") ); //false
+        System.out.println( palindromeStatus("racecar") ); //true
+        System.out.println( palindromeStatus("sass") ); //false
 
         //uncomment to test additional words
         /*
@@ -31,7 +33,7 @@ public class palindrome {
     }// main
 
     // *** use StackCharArray and QueueCharArray here to determine Palindrome
-    private static boolean palindrome(String word) {
+    private static boolean palindromeStatus(String word) {
 
         //assume status is true
         boolean status = true;
