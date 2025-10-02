@@ -105,11 +105,16 @@ public class testCircularQueue {
         System.out.println("Back: " + q.back()); // Back A
         System.out.println("Size: " + q.size()); // Size: 1
 
+        q.enqueue('B');
+        q.enqueue('C');
+        q.enqueue('D');
         // *** Memory Diagram and Logical Diagram (#9) ***
 
+        
         q.spin();
         System.out.println(q);
         // *** Memory Diagram and Logical Diagram (#10) ***
+        // note: write down the random number you used for the spin
 
     }// main
 

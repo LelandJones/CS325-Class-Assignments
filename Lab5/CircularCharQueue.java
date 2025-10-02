@@ -10,6 +10,7 @@ public class CircularCharQueue {
     // data
     private Node back;
     private int size;
+    
 
     // constructor
     public CircularCharQueue() {
@@ -86,7 +87,13 @@ public class CircularCharQueue {
     // simulate "spinning" the queue so that
     // queue rotates a random number of times
     public void spin() {
-
+        if (back == null || size <= 1) {
+            return;
+        }
+        int spins = (int)(Math.random() * size) + 1;
+        for (int i = 0; i < spins; i++) {
+            next();
+        }
     }
 
     // ASCII version
