@@ -92,9 +92,11 @@ public class CircularCharQueue {
         if (back == null || size <= 1) {
             return;
         }
-        int spins = (int)(Math.random() * size) + 1;
-        for (int i = 0; i < spins; i++) {
+        int spins = (int)(Math.random());
+        int i = 0;
+        while ( i < spins) {
             next();
+            i++;
         }
     }
 
