@@ -6,7 +6,7 @@ import java.util.Stack;
  * lab6.java
  * fall 2025
  * 
- * your name
+ * Leland Jones
  * 
  * convert String to double using Java Collection Stack and Queue
  */
@@ -24,6 +24,9 @@ public class lab6 {
         test("-8.96", -8.96);
 
         // *** add three additional test cases here
+        test("123.004", 123.004);
+        test(" -$12,345.67 ", -12345.67);
+        test(" 9,999,999.99 ", 9999999.99);
 
     }// main
 
@@ -37,7 +40,50 @@ public class lab6 {
         boolean decimalFound = false; // *** may or may not use this approach
         boolean negative = false; // *** may or may not use this approach
 
-        // *** add code here ***
+        for (int i = 0; i < a.length(); i++) {
+            if (a.charAt(i) == '-') {
+                negative = true;
+            }
+        }
+
+        for (int i = 0; i < a.length(); i++) {
+
+            char c = a.charAt(i);
+
+            if (Character.isDigit(c)) {
+                int digit = Character.getNumericValue(c);
+
+                if (decimalFound == false) {
+                    s.push(digit);
+                } else {
+                    q.add(digit);
+                }
+
+            } else if (c == '.') {
+                decimalFound = true;
+            }
+        }
+
+        double placeValue = 1.0;
+        while (s.isEmpty() == false) {
+            int digit = s.pop();
+            answer = answer + (digit * placeValue);
+            placeValue = placeValue * 10;
+        }
+
+        double decimalValue = 0.0;
+        double divisor = 10.0;
+        while (q.isEmpty() == false) {
+            int digit = q.remove();
+            decimalValue = decimalValue + (digit / divisor);
+            divisor = divisor * 10;
+        }
+
+        answer = answer + decimalValue;
+
+        if (negative == true) {
+            answer = -answer;
+        }
 
         return answer;
 
