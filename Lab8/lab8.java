@@ -19,16 +19,18 @@ public class lab8 {
 
         System.out.println("Pick a number between 1 and " + MAX + " but dont tell me");
 
+        System.out.println("I can guess your number in " + (int)(Math.log(MAX) / Math.log(2) + 1) + " guesses");
+
         while (!found) {
             int guess = (low + high) / 2;
             guessCount++;
             System.out.println("Guess +" + guessCount + ": Is your number " + guess + "? (y,n)");
-            String response = input.next();
-            if (response.equals("y")) {
+            String answer = input.next();
+            if (answer.equals("y")) {
                 found = true;
-                System.out.println("I found your number in " + guessCount + " guesses!");
+                System.out.println("I was able to guess your number in " + guessCount + " guesses");
             } 
-            else if (response.equals("n")) {
+            else if (answer.equals("n")) {
                 System.out.println("Is your number higher or lower than " + guess + "? (h,l)");
                 String hint = input.next();
                 if (hint.equals("h")) {
@@ -47,10 +49,6 @@ public class lab8 {
             }
 
         }
-        if (found) {
-            System.out.println("The number was found in " + guessCount + " guesses.");
-        }
-
         input.close();  
     }
 }     
