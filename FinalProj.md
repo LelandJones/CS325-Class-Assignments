@@ -30,8 +30,7 @@ Manufacturers
 BowlingBalls
 | **Field**           | **Data Type**                      | **Key**    | **Description**                                 |
 | ------------------- | ---------------------------------- | ---------- | ----------------------------------------------- |
-| **ball_id**         | INT                                | **PK**     | Unique ID for each bowling ball                 |
-| serial_number       | VARCHAR(50)                        | **UNIQUE** | Manufacturer serial number                      |
+| **serial_number**   | VARCHAR(50)                        | **PK**     | Manufacturer serial number                      |
 | name                | VARCHAR(100)                       |            | Ball model name                                 |
 | **manufacturer_id** | INT                                | **FK**     | Linked to `MANUFACTURERS.manufacturer_id`       |
 | purchase_date       | DATE                               |            | Date the ball was purchased                     |
@@ -49,26 +48,10 @@ PlayerBalls
 | **playerball_id** | INT           | **PK**  | Unique ID for player-ball assignment    |
 | **player_id**     | INT           | **FK**  | Linked to `PLAYERS.player_id`           |
 | **ball_id**       | INT           | **FK**  | Linked to `BOWLINGBALLS.ball_id`        |
-| assigned_date     | DATE          |         | Date ball assigned to player            |
-| notes             | TEXT          |         | Comments about the ball or player usage |
-
-Matches
-| **Field**    | **Data Type**                              | **Key** | **Description**                 |
-| ------------ | ------------------------------------------ | ------- | ------------------------------- |
-| **event_id** | INT                                        | **PK**  | Unique event or match ID        |
-| name         | VARCHAR(100)                               |         | Name of the match or tournament |
-| event_date   | DATE                                       |         | When the match occurred         |
-| location     | VARCHAR(100)                               |         | Venue of the event              |
-| event_type   | ENUM('Tournament','Practice','Exhibition') |         | Type of event                   |
 
 BallUsage
 | **Field**         | **Data Type** | **Key** | **Description**                       |
 | ----------------- | ------------- | ------- | ------------------------------------- |
 | **usage_id**      | INT           | **PK**  | Unique record of ball usage           |
 | **playerball_id** | INT           | **FK**  | Linked to `PLAYERBALLS.playerball_id` |
-| **event_id**      | INT           | **FK**  | Linked to `MATCHES.event_id`          |
-| usage_date        | DATE          |         | Date ball was used                    |
-| event_type        | VARCHAR(50)   |         | Event type or format                  |
-| score             | INT           |         | Player’s score using the ball         |
 | lane_conditions   | VARCHAR(100)  |         | Lane oil pattern or condition         |
-| notes             | TEXT          |         | Additional notes or observations      |
