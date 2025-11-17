@@ -30,7 +30,7 @@ Manufacturers
 BowlingBalls
 | **Field**           | **Data Type**                      | **Key**    | **Description**                                 |
 | ------------------- | ---------------------------------- | ---------- | ----------------------------------------------- |
-| **serial_number**   | VARCHAR(50)                        | **PK**     | Manufacturer serial number                      |
+| **ball_id**         | INT                                | **PK**     | Ball Identifier                                 |
 | name                | VARCHAR(100)                       |            | Ball model name                                 |
 | **manufacturer_id** | INT                                | **FK**     | Linked to `MANUFACTURERS.manufacturer_id`       |
 | purchase_date       | DATE                               |            | Date the ball was purchased                     |
