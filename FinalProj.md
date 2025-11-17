@@ -6,7 +6,6 @@ erDiagram
     BOWLINGBALLS ||--o{ PLAYERBALLS : assigned_to
     PLAYERBALLS ||--o{ BALLUSAGE : used_in
     MANUFACTURERS ||--o{ BOWLINGBALLS : produces
-    BALLUSAGE }o--|| MATCHES : occurs_in
 
 ```
 Players
